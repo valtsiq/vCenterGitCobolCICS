@@ -13,7 +13,7 @@
       * DSnames .............. B090290.CEPVSA01
       * JOB def cluster ...... B090290.LIB.JCL(CEPDFCLU)
       * Transacao CICS  ...... KEP0
-      *
+      * Programa testado agora as 14:47
       ******************************************************************
        IDENTIFICATION DIVISION.
        PROGRAM-ID.    CEPCICS1.
@@ -82,18 +82,18 @@
                    TO WK-CEPV0001-CIDADE
            END-IF
       *
-            IF LK-CEP EQUAL '09041160'
-               MOVE LK-CEP
-                    TO WK-CEPV0001-CODE
-              MOVE 'CEP nao encontrado       '
-                   TO WK-CEPV0001-CIDADE
-              MOVE 'CEP nao encontrado       '
-                   TO WK-CEPV0001-BAIRRO
-              MOVE 'CEP nao encontrado       '
-                   TO WK-CEPV0001-LOGRADOURO
-              MOVE SPACES
-                   TO WK-CEPV0001-UF
-           END-IF
+      *     IF LK-CEP EQUAL '09041160'
+      *        MOVE LK-CEP
+      *             TO WK-CEPV0001-CODE
+      *       MOVE 'CEP nao encontrado       '
+      *            TO WK-CEPV0001-CIDADE
+      *       MOVE 'CEP nao encontrado       '
+      *            TO WK-CEPV0001-BAIRRO
+      *       MOVE 'CEP nao encontrado       '
+      *            TO WK-CEPV0001-LOGRADOURO
+      *       MOVE SPACES
+      *            TO WK-CEPV0001-UF
+      *    END-IF
       *
            MOVE SPACES          TO DFHCOMMAREA
            MOVE WK-CEPV0001-REC TO DFHCOMMAREA
