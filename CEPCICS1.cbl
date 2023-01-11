@@ -58,7 +58,7 @@
        PROCEDURE DIVISION.
 
       *----------------------------------------------------------------*
-       MAINLINE SECTION.     S
+       MAINLINE SECTION.
       *----------------------------------------------------------------*
       * Common code                                                    *
       *----------------------------------------------------------------*
@@ -82,18 +82,18 @@
                    TO WK-CEPV0001-CIDADE
            END-IF
       *
-      *     IF LK-CEP EQUAL '09041160'
-      *        MOVE LK-CEP
-      *             TO WK-CEPV0001-CODE
-      *       MOVE 'CEP nao encontrado       '
-      *            TO WK-CEPV0001-CIDADE
-      *       MOVE 'CEP nao encontrado       '
-      *            TO WK-CEPV0001-BAIRRO
-      *       MOVE 'CEP nao encontrado       '
-      *            TO WK-CEPV0001-LOGRADOURO
-      *       MOVE SPACES
-      *            TO WK-CEPV0001-UF
-      *    END-IF
+           IF LK-CEP EQUAL '09041160'
+             MOVE LK-CEP
+                   TO WK-CEPV0001-CODE
+             MOVE 'CEP nao encontrado       '
+                  TO WK-CEPV0001-CIDADE
+             MOVE 'CEP nao encontrado       '
+                  TO WK-CEPV0001-BAIRRO
+             MOVE 'CEP nao encontrado       '
+                  TO WK-CEPV0001-LOGRADOURO
+             MOVE SPACES
+                  TO WK-CEPV0001-UF
+           END-IF
       *
            MOVE SPACES          TO DFHCOMMAREA
            MOVE WK-CEPV0001-REC TO DFHCOMMAREA
